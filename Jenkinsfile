@@ -1,5 +1,5 @@
 pipeline {
-    options { timeout(time: "${BUILD_TIMEOUT}", unit: 'MINUTES') }
+    //options { timeout(time: "${BUILD_TIMEOUT}", unit: 'MINUTES') }
     agent {
         docker {
             image 'pycodocker/gradle-jdk11-build:v1'
