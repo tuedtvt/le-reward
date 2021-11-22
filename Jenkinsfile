@@ -10,7 +10,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'gradlew clean build'
+                sh '
+                echo $PWD
+                ls
+                gradlew clean build'
             }
         }
         stage('SonarQube analysis') {
