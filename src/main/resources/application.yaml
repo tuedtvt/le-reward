@@ -1,0 +1,43 @@
+server:
+  port: 8085
+  tomcat:
+    relaxed-query-chars: [ '{','}','^','`','|','[',']','\' ]
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /le-reward
+    encoding:
+      enabled: true
+      charset: UTF-8
+
+  ssl:
+    enabled: true
+    key-alias: le_reward
+    key-store: classpath:keystore/le_reward.p12
+    key-store-type: PKCS12
+    key-store-password: p@ssword
+
+spring:
+  profiles:
+    active: local
+  jackson:
+    default-property-inclusion: non_null
+
+mongock:
+  enabled: true
+  change-logs-scan-package:
+    - com.ptc.loyalty.reward.changlogs
+
+corsConfiguration:
+  allowedAllOrigin: true
+
+management:
+  trace:
+    http:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,10 @@
+openapi: 3.0.0
+info:
+  description: Reward microservice
+  version: v3
+  title: Microservice
+servers:
+  - url: 'http://localhost:8085/le-reward/'
+    description: Local
+
+paths:

@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongodb-dev:27017/le-reward
+
+logging:
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    org.springframework.data.mongodb: ERROR
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    com.ptc.loyalty.reward: DEBUG
+
+mongock:
+  enabled: true
