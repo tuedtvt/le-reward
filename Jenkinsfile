@@ -1,4 +1,3 @@
-#!/usr/bin/env groovy
 pipeline {
     options { timeout(time: "${BUILD_TIMEOUT}", unit: 'MINUTES') }
     agent {
