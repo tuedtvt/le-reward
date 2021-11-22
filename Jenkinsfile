@@ -3,7 +3,7 @@ pipeline {
     agent {
         docker {
             image 'pycodocker/gradle-jdk11-build:v1'
-            args '-v $HOME:/var/maven -v /var/run/docker.sock:/var/run/docker.sock --network="host" -u root --privileged'
+            args '-v $PWD:/var/maven -v /var/run/docker.sock:/var/run/docker.sock --network="host" -u root --privileged'
             reuseNode true
         }
     }
