@@ -13,19 +13,19 @@ pipeline {
                 sh '''
                 echo $PWD
                 ls
-                gradlew clean build
+                ./gradlew clean build
                 '''
             }
         }
-        stage('SonarQube analysis') {
-            when {
-                branch 'develop'
-            }
-            steps {
-                withSonarQubeEnv('PYCO SonarQube Server') {
-                    sh 'gradlew sonarqube'
-                }
-            }
-        }
+        //stage('SonarQube analysis') {
+           // when {
+           //     branch 'develop'
+           // }
+           // steps {
+           //     withSonarQubeEnv('PYCO SonarQube Server') {
+           //         sh '.gradlew sonarqube'
+           //     }
+           // }
+       // }
     }
 }
