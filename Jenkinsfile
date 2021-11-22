@@ -13,6 +13,7 @@ pipeline {
                 sh '''
                 echo $PWD
                 ls
+                chmod +x gradlew
                 ./gradlew clean build
                 '''
             }
